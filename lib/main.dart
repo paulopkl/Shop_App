@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:shop/providers/CartProvider.dart';
+import 'package:shop/providers/OrdersProvider.dart';
 import 'package:shop/providers/ProductsProvider.dart';
 import 'package:shop/utils/AppRoutes.dart';
+import 'package:shop/views/CartScreen.dart';
+import 'package:shop/views/OrdersScreen.dart';
 import 'package:shop/views/ProductDetailScreen.dart';
 import 'package:shop/views/ProductsOverviewScreen.dart';
 // import 'package:shop/providers/CounterProvider.dart';
@@ -13,28 +17,30 @@ void main() {
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return
-        // CounterProvider(
-        //   child:
-        ChangeNotifierProvider(
-      create: (_) => ProductsProvider(), // Retornou um objeto no estado global
+    return MultiProvider(
+      providers: [
+        // Retorna multiplos providers como objeto no estado global
+        ChangeNotifierProvider(create: (_) => new ProductsProvider()),
+        ChangeNotifierProvider(create: (_) => new CartProvider()),
+        ChangeNotifierProvider(create: (_) => new OrdersProvider()),
+      ],
       child: MaterialApp(
+        debugShowCheckedModeBanner: false,
         title: 'Minha Loja',
         theme: ThemeData(
           primarySwatch: Colors.purple,
           accentColor: Colors.deepOrange,
           fontFamily: "Lato",
         ),
-        home: ProductOverviewScreen(),
+        // home: ProductOverviewScreen(),
         routes: {
+          AppRoutes.HOME: (ctx) => ProductOverviewScreen(),
           AppRoutes.PRODUCT_DETAIL: (ctx) => ProductDetailScreen(),
-          // AppRoutes.PRODUCT_DETAIL: (ctx) => ProductDetailScreen(product: null),
-          // AppRoutes.PRODUCT_DETAIL: (ctx) => ProductDetailScreen(product: null),
-          // AppRoutes.PRODUCT_DETAIL: (ctx) => ProductDetailScreen(product: null),
+          AppRoutes.CART: (ctx) => CartScreen(),
+          AppRoutes.ORDERS: (ctx) => OrdersScreen(),
         },
       ),
     );
-    // );
   }
 }
 
