@@ -15,7 +15,9 @@ class _ProductDetailScreenState extends State<ProductDetailScreen> {
 
     return Scaffold(
       appBar: AppBar(
-        title: Text(product.title),
+        title: Center(
+          child: Text(product.title),
+        ),
       ),
       body: SingleChildScrollView(
         child: Column(

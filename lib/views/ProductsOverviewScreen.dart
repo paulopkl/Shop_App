@@ -28,7 +28,9 @@ class _ProductOverviewScreenState extends State<ProductOverviewScreen> {
 
     return Scaffold(
       appBar: AppBar(
-        title: Center(child: Text("Minha Loja")),
+        title: Center(
+          child: Center(child: Text("Minha Loja")),
+        ),
         actions: <Widget>[
           PopupMenuButton(
             icon: Icon(Icons.more_vert),
@@ -71,9 +73,7 @@ class _ProductOverviewScreenState extends State<ProductOverviewScreen> {
           ),
         ],
       ),
-      body: ProductGrid(
-        showFavoriteOnly: _showFavoriteOnly,
-      ),
+      body: ProductGrid(showFavoriteOnly: _showFavoriteOnly),
       drawer: AppDrawer(),
     );
   }

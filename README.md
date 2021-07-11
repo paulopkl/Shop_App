@@ -1,16 +1,31 @@
-# shop
+# Shop App
 
-A new Flutter project.
+## Tabela de Conteúdos
 
-## Getting Started
+- [Sobre](#about)
+- [Preview do projeto](#preview)
+- [Pre_requisitos](#install)
 
-This project is a starting point for a Flutter application.
+## Sobre <a name="about"></a>
 
-A few resources to get you started if this is your first Flutter project:
+App desenvolvido para fins de teste e de diversão usando todo o conceito de gerênciamento de estado interno e
+externo do flutter, além de estar muito bem componentizado e otimizado para não despediçar memória.
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+## Preview do projeto <a name="preview"></a>
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+<img src=".images/1.PNG">
+<img src=".images/2.PNG">
+<img src=".images/3.PNG">
+<img src=".images/4.PNG">
+<img src=".images/5.PNG">
+<img src=".images/6.PNG">
+<img src=".images/7.PNG">
+<img src=".images/8.PNG">
+
+### Prerequisitos necessários <a name="install"></a>
+
+Alguns dos pré-requisitos necessários para testar o projeto.
+
+- Emulador do Android Studio instalado e rodando.
+- Dart command line.
+- Flutter command line e extensão do VSCode.
